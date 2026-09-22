@@ -1,0 +1,25 @@
+name = "RequestProject"
+defaultTargets = ["MTuple", "MTupleExt"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.28.0"
+
+# Precedent: the completed `m = 3` Kasami cyclic-additive theorem of
+# D. S. McNeil, G. P. Nagy and A. Vajda (Palomar entry
+# PALOMAR-2026-09-04-000005).  `MTupleExt/M3Transfer.lean` transports it into
+# the `m`-tuple frame.  This revision is the Lean 4.28.0 / Mathlib v4.28.0
+# state of that repository, matching this project's toolchain.
+[[require]]
+name = "KasamiCyclicAdditive"
+git = "https://github.com/dsm054/kasami_cyclic_additive.git"
+rev = "301a837f7d21c62d3d621472869f1f3fbd8f6ef8"
+
+[[lean_lib]]
+name = "MTuple"
+globs = ["MTuple.*"]
+
+[[lean_lib]]
+name = "MTupleExt"
+globs = ["MTupleExt.*"]
